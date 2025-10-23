@@ -2,7 +2,7 @@ fecha,alumno,modulo,descripcion_error,causa,solucion,resultado,notas
 2025-10-21,Nombre Apellido,Clase 01,ModuleNotFoundError: No module named 'requests',Dependencia no instalada,"pip install -r requirements.txt",Solucionado,""
 
 Fecha:22/10/2025
-Alumno Andres Felipe Moreno Rueda
+Alumno: Andres Felipe Moreno Rueda
 Descripción del error
 
 Error 1:
@@ -58,4 +58,8 @@ Una vez creado el entorno, se puede activar con:
 Si aún persiste un error, aplicar:
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
+Fecha:23/10/2025
+Alumno: Andres Felipe Moreno Rueda
 
+El dia de hoy no presente ningun problema para 
+subir los archivos a git 
