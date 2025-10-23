@@ -1,0 +1,61 @@
+fecha,alumno,modulo,descripcion_error,causa,solucion,resultado,notas
+2025-10-21,Nombre Apellido,Clase 01,ModuleNotFoundError: No module named 'requests',Dependencia no instalada,"pip install -r requirements.txt",Solucionado,""
+
+Fecha:22/10/2025
+Alumno Andres Felipe Moreno Rueda
+Descripción del error
+
+Error 1:
+ObjectNotFound: (.\.venv\Scripts\activate:String) [], CommandNotFoundException
+
+Error 2:
+PermissionDenied: (:) [Set-ExecutionPolicy], UnauthorizedAccessException
+
+Causas del Error 1
+
+No tenía permisos para ejecutar el comando.
+
+No existía el directorio .venv en la PC.
+
+Causa del Error 2
+
+No ejecuté la consola como administrador, lo que provocaba un error al usar el comando:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+Solución del Error 1
+
+Crear el entorno virtual con el siguiente comando:
+python -m venv .venv
+
+Permitir la ejecución de scripts con:
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+Solución del Error 2
+
+Usar la versión del comando para usuario común (sin modo administrador):
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+Resultado
+
+El directorio se instaló correctamente y se pudo activar con:
+.\.venv\Scripts\activate
+
+Notas
+
+Gracias a ChatGPT, pude seguir las pautas necesarias para solucionar el error.
+También se puede abrir PowerShell en modo administrador y ejecutar:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+
+Además, recomiendo verificar el contenido del directorio .venv\Scripts\ con el comando:
+ls .\.venv\Scripts\
+
+Si no aparecen los archivos Activate.ps1, Activate.bat o python.exe, es necesario ejecutar nuevamente:
+python -m venv .venv
+
+Una vez creado el entorno, se puede activar con:
+.\.venv\Scripts\activate
+
+Si aún persiste un error, aplicar:
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+
